@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="74ed6d7e-5783-4006-b87f-7d5342f924db" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>main</find>
+      <find>путь_до</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1UQxvdh5tNHsfR5cWdHCOiXRHd5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sora\Desktop\PO\progects\manga_site\main\templates\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sora\Desktop\PO\progects\manga_site\main\templatetags" />
+      <recent name="C:\Users\sora\Desktop\PO\progects\manga_site\main\static" />
+      <recent name="C:\Users\sora\Desktop\PO\progects\manga_site\mangas\mangas" />
+      <recent name="C:\Users\sora\Desktop\PO\progects\manga_site\main\static\css" />
+      <recent name="C:\Users\sora\Desktop\PO\progects\manga_site\main\templates\main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="manga_site" type="Python.DjangoServer" factoryName="Django server">
+      <module name="manga_site" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="manga_site.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\sora\AppData\Local\Programs\Python\Python37-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74ed6d7e-5783-4006-b87f-7d5342f924db" name="Default Changelist" comment="" />
+      <created>1554243616575</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554243616575</updated>
+      <workItem from="1554243617684" duration="109000" />
+      <workItem from="1554243776908" duration="1043000" />
+      <workItem from="1554297010694" duration="10455000" />
+      <workItem from="1554314797953" duration="220000" />
+      <workItem from="1554335665026" duration="28000" />
+      <workItem from="1554376552116" duration="6840000" />
+      <workItem from="1554481904373" duration="900000" />
+      <workItem from="1554636159669" duration="11000" />
+      <workItem from="1554804493017" duration="1804000" />
+      <workItem from="1554806678193" duration="631000" />
+      <workItem from="1554807312583" duration="14000" />
+      <workItem from="1554807328658" duration="171000" />
+      <workItem from="1554807652699" duration="13813000" />
+      <workItem from="1554824401674" duration="5929000" />
+      <workItem from="1554834801552" duration="1411000" />
+      <workItem from="1554883953211" duration="627000" />
+      <workItem from="1554887371748" duration="6741000" />
+      <workItem from="1554895419810" duration="250000" />
+      <workItem from="1554895673124" duration="1599000" />
+      <workItem from="1554900642792" duration="4566000" />
+      <workItem from="1554908242528" duration="275000" />
+      <workItem from="1554925675198" duration="7556000" />
+      <workItem from="1554938009446" duration="1677000" />
+      <workItem from="1554960535448" duration="12472000" />
+      <workItem from="1554990676288" duration="20925000" />
+      <workItem from="1555067461394" duration="19914000" />
+      <workItem from="1555093328181" duration="1091000" />
+      <workItem from="1555113207848" duration="7255000" />
+      <workItem from="1555121132188" duration="807000" />
+      <workItem from="1555175263031" duration="10000" />
+      <workItem from="1555266583553" duration="2864000" />
+      <workItem from="1555316234978" duration="701000" />
+      <workItem from="1555355170163" duration="193000" />
+      <workItem from="1555447304916" duration="819000" />
+      <workItem from="1555506523752" duration="5948000" />
+      <workItem from="1555530889739" duration="10813000" />
+      <workItem from="1555586613229" duration="5806000" />
+      <workItem from="1555610495519" duration="3854000" />
+      <workItem from="1555674003499" duration="33000" />
+      <workItem from="1555678577495" duration="25000" />
+      <workItem from="1555681202495" duration="153000" />
+      <workItem from="1556041642892" duration="2571000" />
+      <workItem from="1556103040867" duration="64000" />
+      <workItem from="1558701465395" duration="2313000" />
+      <workItem from="1559659012121" duration="63000" />
+      <workItem from="1575302854816" duration="188000" />
+      <workItem from="1575303146557" duration="1837000" />
+      <workItem from="1575308469343" duration="27000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/main/templates/main/heder.html</url>
+          <line>32</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

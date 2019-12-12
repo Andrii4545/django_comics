@@ -1,0 +1,95 @@
+{% extends "main/heder.html" %}
+{% block main %}
+ <div class="wrapper">
+    <div class="content">
+        {% for i in manga %}
+            <div class="block">
+                <div class = "title">
+                <img class="imgs" src="{{ i.title.url }}" alt="#">
+                </div>
+                <div class = "minic">
+                    <div class="name">
+                        <a href="/read/?manga={{ i.id }}">
+                        <h3>{{ i.name }}</h3>
+                            </a>
+                    </div>
+                    <div class="data">
+                        Дата:<a href="/tags/?data={{ i.data_reliz.isoformat}}">
+                         {{ i.data_reliz }}
+                            </a>
+                    </div>
+                    <div class="auth">
+                        Автор:<a href="/tags/?auth={{ i.author.id }}">
+                         {{ i.author }}
+                            </a>
+                    </div>
+                    <div class="tag">
+                        <form action="/tags/">
+                     теги:
+                        {% for j in i.tag.all %}
+                            <button style="margin: 1px" class="btn btn-outline-dark btn-sm" type="submit" name="{{ j.id }}" value="on">{{ j.name }}</button>
+                        {% endfor %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+         {% endfor %}
+    </div>
+
+    <div class="test" >
+        <form action="/tags/" class="cons">
+    <button style="margin: 10px" class="btn btn-info btn-dark" type="button" data-toggle="collapse" data-target="#hide-me">Теги</button>
+<div id="hide-me" class="collapse in">
+
+
+    <ul class ="f2f">
+            {% for i in Tag %}
+            <li>
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input"  name="{{ i.id }}" id="{{ i.id }}t"
+                        {% for jk in check %}
+                            {% if i.id == jk %}
+                                checked = "1"
+                            {% endif %}
+                        {% endfor %}>
+            <label class="custom-control-label" for="{{ i.id }}t">{{ i.name }}</label>
+            </div>
+            </li>
+            {% endfor %}
+        </ul>
+</div>
+    <button style="margin: 10px" class="btn btn-info btn-dark" type="button" data-toggle="collapse" data-target="#hide-ms">Автор</button>
+<div style="    overflow-y: scroll; max-height: 200px" id="hide-ms" class="collapse in">
+
+  <ul>
+      {% for i in aut %}
+      <li>
+          <div>
+              <input type="radio" id = "{{ i.id }}a" name="auth" value="{{ i.id }}">
+              <label for="{{ i.id }}a">{{ i.name }}</label>
+          </div>
+      </li>
+      {% endfor %}
+  </ul>
+</div>
+
+        <input style="margin: 10px" type="date"  name="data">
+            <input style="margin: 10px" class="btn btn-dark" type="submit" value="Поиск">
+    </form>
+    </div>
+ </div>
+{% load  defa %}
+<div class="pagination">
+    <span class="step-links">
+        {% if manga.has_previous %}
+            <a href="?{% query_update request.GET 'page' manga.previous_page_number %}">Previous</a>
+        {% endif %}
+            <span class="current">
+                Page {{ manga.number }} of {{ manga.paginator.num_pages }}.
+            </span>
+        {% if manga.has_next %}
+            <a href="?{% query_update request.GET 'page' manga.next_page_number %}" >Next</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock main %}

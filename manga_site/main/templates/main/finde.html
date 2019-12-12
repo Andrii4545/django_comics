@@ -1,0 +1,42 @@
+{% extends "main/heder.html" %}
+{% block main %}
+    <form action="/tags/">
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#hide-me">Теги</button>
+<div id="hide-me" class="collapse in">
+
+
+    <ul class ="f2f">
+            {% for i in tag %}
+            <li>
+            <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input"  name="{{ i.id }}" id="{{ i.id }}t"
+                        {% for jk in check %}
+                            {% if i.id == jk %}
+                                checked = "1"
+                            {% endif %}
+                        {% endfor %}>
+            <label class="custom-control-label" for="{{ i.id }}t">{{ i.name }}</label>
+            </div>
+            </li>
+            {% endfor %}
+        </ul>
+</div>
+    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#hide-ms">Автор</button>
+<div id="hide-ms" class="collapse in">
+
+  <ul>
+      {% for i in auth %}
+      <li>
+          <div>
+              <input type="radio" id = "{{ i.id }}a" name="auth" value="{{ i.id }}">
+              <label for="{{ i.id }}a">{{ i.name }}</label>
+          </div>
+      </li>
+      {% endfor %}
+  </ul>
+</div>
+
+        <input type="date"  name="data">
+            <input type="submit" value="Поиск">
+    </form>
+{% endblock %}

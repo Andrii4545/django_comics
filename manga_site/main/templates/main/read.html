@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .iim{
+    display: flex;
+    flex-direction: column;
+            overflow: hidden;
+
+    /* justify-content: center; */
+    align-items: center;
+    }
+    .this{
+        margin: 5px;
+    }
+</style>
+<body>
+<div class = "iim">
+    {% for i in imp %}
+        <div class="this">
+        <img src="{{ i.pic.url }}" alt="">
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+</body>
+
+{% load static %}
+<!-- fancyBox CSS -->
+<link rel="stylesheet" href="{% static 'css/rea.css' %}">
+
+</html>
+
+
+
+
+

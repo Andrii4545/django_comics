@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Hello, world!</title>
+</head>
+<body>
+
+<header>
+    <div class="wrapper" style="display: block">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Manga</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Главная страница</a>
+                    </li>
+
+                    <li>
+                        <form action="/such/" class="form-inline my-2 my-lg-0">
+                            <input name="such" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+                {% if user.is_active %}
+                    <a href="/logut/" style="color: white">Вийти({{ user.username }})</a>
+                {% else %}
+                    <form action="/login/" class="form-inline my-2 my-lg-0" method="post">
+                        {% csrf_token %}
+                        <input name="login" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <input name="password" class="form-control mr-sm-2" type="password" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Войти</button>
+                    </form>
+                {% endif %}
+
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class ="container">
+
+
+
+    <main>
+        <div class="wrapper">
+            <div class="block">
+                <div class="sssd">
+                    <img class="imgs" src="{{ manga.title.url }}" alt="">
+                </div>
+                <div class="minic">
+                    <div>
+                        Имя: {{ manga.name }}
+                    </div>
+                    <div>
+                        Дата:<a href="/tags/?data={{ manga.data_reliz.isoformat}}">
+                         {{ manga.data_reliz }}
+                            </a>
+                    </div>
+                    <div>
+                        Автор:<a href="/tags/?auth={{ manga.author.id }}">
+                         {{ manga.author }}
+                            </a>
+                    </div>
+                    <div>
+                        <form action="/tags/">
+                            Теги:
+                            {% for j in manga.tag.all %}
+                            <button style="margin: 1px" class="btn btn-outline-dark btn-sm" type="submit" name="{{ j.id }}" value="on">{{ j.name }}</button>
+                            {% endfor %}
+                        </form>
+                    </div>
+                    <div>
+                        Описание: {{ manga.datas }}
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="    overflow-y: scroll;
+    max-height: 250px;">
+                <table class="table table-striped table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col">Том</th>
+                        <th scope="col">Глава</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Силка</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in glv %}
+                                                <tr>
+
+                            <td>{{  i.num_tom}}</td>
+                                                    <td>{{  i.numver}}</td>
+                            <td>{{  i.name}}</td>
+                            <td><a href="/glava-read/?glava={{ i.id }}">открить</a></td>
+
+                            </tr>
+
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </div>
+        <br>
+
+        <section class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-body">
+                            {% if user.is_active %}
+                                <form id="form_test" method="post">
+                                    {% csrf_token %}
+                                    <textarea id = "this_c" class="form-control" rows="2" placeholder="Добавьте Ваш комментарий"></textarea>
+                                    <div class="mar-top clearfix">
+                                        <button id = "add" class="btn btn-sm btn-primary pull-right" type="button" ><i class="fa fa-pencil fa-fw"></i>Добавить</button>
+                                    </div>
+                                </form>
+                            {% else %}
+                                <h3>Для написания коментариев <a href="/register">зарегистрируйтесь</a></h3>
+                            {% endif %}
+                            <a class="btn btn-trans btn-icon fa fa-video-camera add-tooltip" href="#"></a>
+                            <a class="btn btn-trans btn-icon fa fa-camera add-tooltip" href="#"></a>
+                            <a class="btn btn-trans btn-icon fa fa-file add-tooltip" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel">
+
+                    <div class="panel-body" id="sitr">
+                        {% for i in coments %}
+                            <div class="media-block">
+                                <a class="media-left" href="#"><img class="img-circle img-sm" alt="Профиль пользователя" src="http://bootstraptema.ru/snippets/icons/2016/mia/1.png"></a>
+                                <div class="media-body">
+                                    <div class="mar-btm">
+                                        <a href="#" class="btn-link text-semibold media-heading box-inline">{{ i.author_id.username }}</a>
+                                        <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> {{ i.pub_date }}</p>
+                                    </div>
+                                    <p>{{ i.content }}</p>
+                                    <div class="pad-ver">
+                                        <div class="btn-group">
+                                            <a class="btn btn-sm btn-default btn-hover-success" href="#"><i class="fa fa-thumbs-up"></i></a>
+                                            <a class="btn btn-sm btn-default btn-hover-danger" href="#"><i class="fa fa-thumbs-down"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</div>
+</body>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/tts.css' %}">
+<link rel="stylesheet" href="{% static 'css/coment.css' %}">
+<script src="{% static "js/coment.js" %}"></script>
+<script>
+    var name = "{{ user.username }}";
+    var user_id = {{ user.id }};
+    var manga_id = {{ manga.id }};
+</script>
+
+</html>
